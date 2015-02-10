@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('img/danceFloor.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -20,7 +22,7 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+.dot{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
@@ -29,4 +31,3 @@ img {
   position: absolute;
   height: 60px;
 }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

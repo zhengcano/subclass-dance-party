@@ -1,7 +1,7 @@
 var SizeDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<img src="img/Leslie.png"></img>');
-  this.$node.addClass('size');
+  this.$node.addClass('dancer size');
   this.lineOffset = ""+($('body').width()-300)+"px";
   this.setPosition(top, left);
 

@@ -2,7 +2,9 @@ var SpinDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.lineOffset = "250px";
   this.$node= $('<img src="img/Ron.png"></img>');
-  this.$node.addClass('spin');
+  this.$node.addClass('spin dancer');
+  this.timeBetweenSteps = 50;
+  this.angle = 0;
   this.setPosition(top, left);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -18,7 +20,8 @@ var SpinDancer = function(top, left, timeBetweenSteps){
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
-    this.$node.animate("animation", "rotate(0.75turn)");
+    this.angle +=18;
+    this.$node.css("transform", "rotate("+this.angle+"deg)");
   };
 
   SpinDancer.prototype.lineUp = function(pos) {

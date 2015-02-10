@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
 
   $(".lineUpButton").on("click",function(){
-    var types = [BlinkyDancer, ColorDancer, ShapeDancer, SizeDancer, SpinDancer];
+    var types = [BlinkyDancer, ColorDancer, ShapeDancer, SizeDancer, SpinDancer, SwitchDancer];
     types.forEach(function(type) {
       var group = this.dancers.filter(function(dancer) {
         return dancer instanceof type;
