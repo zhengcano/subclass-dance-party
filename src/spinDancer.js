@@ -12,7 +12,7 @@ var SpinDancer = function(top, left, timeBetweenSteps){
 };
   SpinDancer.prototype = Object.create(Dancer.prototype);
 
-  SpinDancer.prototype.constructor = BlinkyDancer;
+  SpinDancer.prototype.constructor = SpinDancer;
 
   SpinDancer.prototype.step = function(){
     // call the old version of step at the beginning of any call to this new version of step

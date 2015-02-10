@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url('img/danceFloor.jpg');
+  background-image: url('img/danceFloor2.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   font-size: 18px;
@@ -30,4 +30,42 @@ body, a:link, a:visited, a:active{
 img {
   position: absolute;
   height: 60px;
+}
+div div {
+  position: relative;
+}
+div div img {
+  position: absolute;
+}
+.destiny div .fred {
+  left: 130px;
+  top: 2px;
+}
+.destiny div .phil {
+  left: 70px;
+  top: 4px;
+}
+.destiny .marcus {
+  left: 187px;
+  top: 10px;
+}
+.destiny {
+  background-image: url('img/beyonce.gif');
+  background-position: center;
+  width: 300px;
+  height: 180px;
+  position: absolute;
+}
+.carlton {
+  background-image: url('img/carlton.gif');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 180px;
+  position: absolute;
+}
+.carlton .allen {
+  left: 30px;
+  top: 5px;
 }

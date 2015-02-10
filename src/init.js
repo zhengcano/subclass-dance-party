@@ -22,9 +22,11 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
+    var bodyHeight = $('body').height();
+    var bodyWidth = $('body').width();
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      bodyHeight/4*Math.random() + bodyHeight/3,
+      bodyWidth*0.7*Math.random(),
       Math.random() * 1000
     );
     window.dancers.push(dancer);
@@ -32,7 +34,7 @@ $(document).ready(function(){
   });
 
   $(".lineUpButton").on("click",function(){
-    var types = [BlinkyDancer, ColorDancer, ShapeDancer, SizeDancer, SpinDancer, SwitchDancer];
+    var types = [SizeDancer, SpinDancer, SwitchDancer, DestinyDancer, StalkerDancer, CarltonDancer];
     types.forEach(function(type) {
       var group = this.dancers.filter(function(dancer) {
         return dancer instanceof type;
