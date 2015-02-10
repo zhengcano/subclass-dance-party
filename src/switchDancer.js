@@ -29,7 +29,7 @@ var SwitchDancer = function(top, left, timeBetweenSteps){
       var thisY = this.$node.css('top').substring(0, this.$node.css('top').indexOf('p'));
 
       if (Math.abs(otherX - thisX) < 100 &&
-        Math.abs(otherY - thisY) < 100 && this.$node !== dancer){
+        Math.abs(otherY - thisY) < 100 && !dancer.hasClass('switch')){
         this.switch(dancers[i]);
         break;
       }
