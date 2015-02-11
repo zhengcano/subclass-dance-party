@@ -56,6 +56,27 @@ div div img {
   height: 180px;
   position: absolute;
 }
+
+.snoop img {
+  top: 12px;
+  left: 45px;
+}
+
+.snoop .pira {
+  top: 12px;
+  left: 55px;
+}
+
+.snoop {
+  background-image: url('img/dog.gif');
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+
 .carlton {
   background-image: url('img/carlton.gif');
   background-position: center;

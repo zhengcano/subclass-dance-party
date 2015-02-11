@@ -34,13 +34,14 @@ $(document).ready(function(){
   });
 
   $(".lineUpButton").on("click",function(){
-    var types = [SizeDancer, SpinDancer, SwitchDancer, DestinyDancer, StalkerDancer, CarltonDancer];
+    var types = [/*SizeDancer, SpinDancer, SwitchDancer, */DestinyDancer, /*StalkerDancer,*/ CarltonDancer, SnoopDancer];
     types.forEach(function(type) {
       var group = this.dancers.filter(function(dancer) {
         return dancer instanceof type;
       });
       for (var i = 0; i < group.length; i++) {
         group[i].lineUp(i);
+        group[i].twirl();
       }
     });
   }.bind(window));

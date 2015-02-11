@@ -1,8 +1,10 @@
-var CarltonDancer = function(top, left, timeBetweenSteps){
+var SnoopDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, 100);
-  this.lineOffset = "350px";
-  this.$node= $('<div><div><img class="allen" src="img/allen.png"</div></div>');
-  this.$node.addClass('dancer carlton');
+  this.lineOffset = "220px";
+  var random = Math.floor(Math.random()*2);
+  var name = ['michelle', 'pira'];
+  this.$node= $('<div><div><img class="' + name[random] +'" src="img/'+name[random]+'.png"</div></div>');
+  this.$node.addClass('dancer snoop');
   this.setPosition(top, left);
   this.time = 0;
   this.$node.css('z-index', Math.floor(top));
@@ -10,24 +12,24 @@ var CarltonDancer = function(top, left, timeBetweenSteps){
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 };
-  CarltonDancer.prototype = Object.create(Dancer.prototype);
+  SnoopDancer.prototype = Object.create(Dancer.prototype);
 
-  CarltonDancer.prototype.constructor = CarltonDancer;
+  SnoopDancer.prototype.constructor = SnoopDancer;
 
-  CarltonDancer.prototype.step = function(){
+  SnoopDancer.prototype.step = function(){
     // call the old version of step at the beginning of any call to this new version of step
     Dancer.prototype.step.call(this);
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
     //this.$node.toggle();
-    this.angle = Math.sin(this.time)*5;
-    this.$node.find('img').css('transform', 'translateY(' + this.angle + "px)");
+    this.angle = Math.sin(this.time*0.315)*7;
+    this.$node.find('img').css('transform', 'translateX(' + this.angle + "px)");
     this.time++;
   };
 
-  CarltonDancer.prototype.lineUp = function(pos) {
-    var sidePos = (pos * ($('body').width()/$('.carlton').length));
+  SnoopDancer.prototype.lineUp = function(pos) {
+    var sidePos = (pos * ($('body').width()/$('.snoop').length));
     this.$node.animate({
       left: ""+sidePos+"px",
       top: this.lineOffset,

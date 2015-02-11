@@ -1,6 +1,6 @@
 var DestinyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, 100);
-  this.lineOffset = "600px";
+  this.lineOffset = "290px";
   this.$node= $('<div><div><img class="phil" src="img/phillip.png"></img><img class="fred" src="img/fred.png"></img><img class="marcus" src="img/marcus.png"></img></div></div>');
   this.$node.addClass('dancer destiny');
   this.setPosition(top, left);
@@ -27,9 +27,10 @@ var DestinyDancer = function(top, left, timeBetweenSteps){
   };
 
   DestinyDancer.prototype.lineUp = function(pos) {
-    var topPos = 50 + (pos * ($('body').height()/$('.destiny').length));
+    var sidePos = (pos * ($('body').width()/$('.destiny').length));
     this.$node.animate({
-      top: ""+topPos+"px",
-      left: this.lineOffset
+      left: ""+sidePos+"px",
+      top: this.lineOffset,
+      "z-index": this.lineOffset.substr(0,this.lineOffset.indexOf('p'))
     });
   };

@@ -26,3 +26,19 @@ var Dancer = function(top, left, timeBetweenSteps){
     // it just schedules the next step
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
   };
+
+  Dancer.prototype.twirl = function(){
+    var degree = 0;
+    var node = this;
+    var spin = function(){
+        setTimeout(function(){
+          node.$node.css('transform', 'rotate('+degree+'deg)');
+          degree += 10;
+          if (degree < 361){
+            spin();
+          }
+        }, 20)
+      };
+    spin();
+
+  };
