@@ -34,7 +34,7 @@ $(document).ready(function(){
   });
 
   $(".lineUpButton").on("click",function(){
-    var types = [/*SizeDancer, SpinDancer, SwitchDancer, */DestinyDancer, /*StalkerDancer,*/ CarltonDancer, SnoopDancer];
+    var types = [/*SizeDancer, SpinDancer, SwitchDancer, */DestinyDancer, /*StalkerDancer,*/ CarltonDancer, SnoopDancer, StepDancer];
     types.forEach(function(type) {
       var group = this.dancers.filter(function(dancer) {
         return dancer instanceof type;
@@ -45,6 +45,51 @@ $(document).ready(function(){
       }
     });
   }.bind(window));
+
+  $(".lightUpButton").on("click", function(){
+    var $light = $('<span class="light"></span>');
+    $('body').append($light);
+    $light.css('left',$('body').width()/2);
+    $light.css('z-index', '291');
+    setTimeout(function(){
+      $light.toggle();
+    },500);
+    setTimeout(function(){
+      $light.toggle();
+    },1000);
+    setTimeout(function(){
+      $light.toggle();
+    },1500);
+    setTimeout(function(){
+      $light.toggle();
+    },2000);
+    setTimeout(function(){
+      $light.remove();
+    },2500);
+
+    var $light2 = $('<span class="light2"></span>');
+    setTimeout(function(){
+    $('body').append($light2);
+    $light2.css('left',$('body').width()/8);
+    $light2.css('z-index', '291');
+    },250)
+
+    setTimeout(function(){
+      $light2.toggle();
+    },750);
+    setTimeout(function(){
+      $light2.toggle();
+    },1250);
+    setTimeout(function(){
+      $light2.toggle();
+    },1750);
+    setTimeout(function(){
+      $light2.toggle();
+    },2270);
+    setTimeout(function(){
+      $light2.remove();
+    },2750);
+  })
 
 });
 

@@ -77,6 +77,27 @@ div div img {
   background-position: center;
   }
 
+
+.step .alex {
+  top: 7px;
+  left: 40px;
+}
+
+.step .sunny {
+  top: 7px;
+  left: 37px;
+}
+
+.step {
+  background-image: url('img/step.gif');
+  position: absolute;
+  width: 130px;
+  height: 180px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .carlton {
   background-image: url('img/carlton.gif');
   background-position: center;
@@ -89,4 +110,22 @@ div div img {
 .carlton .allen {
   left: 30px;
   top: 5px;
+}
+
+.light2 {
+  width: 350px;
+  height: 450px;
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('img/spotlightL.png');
+}
+
+.light {
+  width: 350px;
+  height: 450px;
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('img/spotlightR.png');
 }

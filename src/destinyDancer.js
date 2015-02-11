@@ -1,6 +1,6 @@
 var DestinyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, 100);
-  this.lineOffset = "290px";
+  this.lineOffset = "270px";
   this.$node= $('<div><div><img class="phil" src="img/phillip.png"></img><img class="fred" src="img/fred.png"></img><img class="marcus" src="img/marcus.png"></img></div></div>');
   this.$node.addClass('dancer destiny');
   this.setPosition(top, left);
